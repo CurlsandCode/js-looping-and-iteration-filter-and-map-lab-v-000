@@ -5,17 +5,18 @@ function driversWithRevenueOver (arr, revenue) {
 
  function driverNamesWithRevenueOver (arr, revenue) {
   return driversWithRevenueOver (arr, revenue).map (function (driver) {return driver.name})
-}
+};
 
 function exactMatch (arr, search){
   return arr.filter( function(driver) {
- if (search.name !=== undefined) {
-   return search.name === driver.name {
-   else 
-   return driver.search
+ if (search.name !== undefined) {
+   return driver.name === search.name; }
+   else {
+   return driver.revenue === search.revenue;
   }
- }
-}
+});
+};
+
 function exactMatchToList (arr, search) {
   return exactMatch (arr, search).map (function (driver) {return driver.name})
 }
